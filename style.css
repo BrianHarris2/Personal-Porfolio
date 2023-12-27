@@ -6,12 +6,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: silver;
-    margin: 0 130px;
+    margin: 0;
     padding: 0;
 }
 
 html, body{
     min-height:100%;
+    
 }
 
 span {
@@ -29,10 +30,11 @@ a {
 ul { 
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
-    padding-bottom: 10px;
+    margin-bottom: 5px;
     perspective: 400px;
 }
 
@@ -72,6 +74,8 @@ header {
     justify-content: space-between;
     color: white;
     height: 125px;
+    align-items: flex-end;
+    margin: 0 auto;
 }
 
 .title {
@@ -87,6 +91,7 @@ header {
     align-items: flex-end;
     font-size: 0.9em;
     flex-wrap: wrap;
+    align-content: flex-end;
 }
 
 #contact {
@@ -100,6 +105,7 @@ header {
 .left {
     display: flex;
     width: 70%;
+    height: 100%;
 }
 
 .links {
@@ -109,11 +115,28 @@ header {
     flex-wrap: wrap;
 }
 
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.9em;
+    height: 100%;
+}
+
+.socials a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: white;
+    
+}
+
 nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding-right: 20px;
+    align-content: flex-end;
 }
 
 
@@ -173,22 +196,6 @@ nav a {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 0.9em;
-}
-
-.socials a {
-    text-decoration: none;
-    padding-left: 20px;
-    color: white;
-    
-}
-
-
 
 /* Main */
 #about {
@@ -197,7 +204,10 @@ nav a {
     flex-wrap: wrap;
     height: 650px;
     position: relative;
-    padding: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: calc(106px + 15vh) auto calc(107px + 5vh);
+    display: none;
 }
 
 .about {
@@ -246,7 +256,7 @@ nav a {
 @media screen and (max-width: 767px) {
     header {
         width: 92%;
-        padding: 5vw 30px 0;
+        padding: 5vw 17px 0;
         align-items: flex-start;
         justify-content: space-between;
     }
@@ -273,7 +283,7 @@ nav a {
         flex-wrap: wrap;
         align-items: center;
         top: 0;
-        padding: 30vh 30px 25vh;
+        padding: 30vh 0px 25vh;
         flex-wrap: wrap;
 
         width: 92%;
@@ -294,11 +304,11 @@ nav a {
     }
 
     #about.active {
-        opacity: 30%;
+        opacity: 20%;
     }
 
     #projects.active {
-        opacity: 30%;
+        opacity: 20%;
     }
 
     .project img {
@@ -330,12 +340,17 @@ nav a {
     }
 }
 
+@media screen and (min-width: 420px) and (max-width: 767px) {
+    header .contact ul:first-of-type {
+        margin-bottom: 20px;
+    }
+ }
+
 
 
 /* Projects */
 #projects {
-    
-    padding: 5vw 5vw calc(7.5vw + 67px) 0;
+    padding: 18vw 5vw calc(7.5vw + 67px) 0;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -348,7 +363,7 @@ nav a {
 .project {
     font-family: 'Monument Extended', sans-serif;
     text-align: right;
-    font-size: 9.6vw;
+    font-size: 8.6vw;
     text-transform: uppercase;
     cursor: pointer;
 }
